@@ -4,11 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Swimming Site with Responsive Navbar</title>
-  <!-- Animate.css CDN for quick animations -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="style.css">
 </head>
@@ -88,8 +92,6 @@
 
 <div class="main-container-v2 animate__animated animate__fadeIn" style="--animate-duration: 1s;">
   <div class="content-wrapper-v2">
-    <!-- LEFT COLUMN -->
-    <!-- Add a fade-in-left animation for the left column -->
     <div class="left-column animate__animated animate__fadeInLeft animate__slow">
       <div class="left-column-inner">
         <!-- Intro text -->
@@ -107,55 +109,55 @@
         </section>
 
         <!-- Feature boxes: new design with creative icons from a CDN (no local saving). Same original text retained. -->
-      <section class="feature-boxes">
-        <!-- Box 1: Personalised Learning -->
-        <div class="feature-box animate__animated animate__fadeInUp animate__delay-1s">
-          <div class="feature-content">
-            <!-- External icon from flaticon (placeholder) -->
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3077/3077099.png" 
-              alt="Personalised Icon"
-              class="feature-icon"
-            />
-            <div class="feature-text">
-              <p class="feature-paragraph">PERSONALISED</p>
-              <h2 class="feature-heading">LEARNING</h2>
+        <section class="feature-boxes">
+          <!-- Box 1: Personalised Learning -->
+          <div class="feature-box animate__animated animate__fadeInUp animate__delay-1s">
+            <div class="feature-content">
+              <!-- External icon from flaticon (placeholder) -->
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3077/3077099.png" 
+                alt="Personalised Icon"
+                class="feature-icon"
+              />
+              <div class="feature-text">
+                <p class="feature-paragraph">PERSONALISED</p>
+                <h2 class="feature-heading">LEARNING</h2>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Box 2: Go From Zero Swimming to 1000 Metres -->
-        <div class="feature-box animate__animated animate__fadeInUp animate__delay-2s">
-          <div class="feature-content">
-            <!-- Another external icon -->
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3147/3147330.png"
-              alt="Distance Icon"
-              class="feature-icon"
-            />
-            <div class="feature-text">
-              <p class="feature-paragraph">GO FROM ZERO<br>SWIMMING</p>
-              <h2 class="feature-heading">TO 1OOO<br>METRES</h2>
+          <!-- Box 2: Go From Zero Swimming to 1000 Metres -->
+          <div class="feature-box animate__animated animate__fadeInUp animate__delay-2s">
+            <div class="feature-content">
+              <!-- Another external icon -->
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3147/3147330.png"
+                alt="Distance Icon"
+                class="feature-icon"
+              />
+              <div class="feature-text">
+                <p class="feature-paragraph">GO FROM ZERO<br>SWIMMING</p>
+                <h2 class="feature-heading">TO 1OOO<br>METRES</h2>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Box 3: 1-1 Teaching from Specialists -->
-        <div class="feature-box animate__animated animate__fadeInUp animate__delay-3s">
-          <div class="feature-content">
-            <!-- External icon from flaticon (placeholder) -->
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/201/201570.png"
-              alt="Specialist Icon"
-              class="feature-icon"
-            />
-            <div class="feature-text">
-              <p class="feature-paragraph">1-1 TEACHING FROM</p>
-              <h2 class="feature-heading">SPECIALISTS</h2>
+          <!-- Box 3: 1-1 Teaching from Specialists -->
+          <div class="feature-box animate__animated animate__fadeInUp animate__delay-3s">
+            <div class="feature-content">
+              <!-- External icon from flaticon (placeholder) -->
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/201/201570.png"
+                alt="Specialist Icon"
+                class="feature-icon"
+              />
+              <div class="feature-text">
+                <p class="feature-paragraph">1-1 TEACHING FROM</p>
+                <h2 class="feature-heading">SPECIALISTS</h2>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
     </div>
 
@@ -181,9 +183,73 @@
   </div>
 </div>
 
-<div class="content-wrapper-2">
-  hello
-</div>
+
+<section class="carousel" aria-label="Gallery">
+  <!-- Bubble Animation Container -->
+  <div class="bubble-container">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+  
+  <ol class="carousel__viewport">
+    <!-- SLIDE 1 -->
+    <li id="carousel__slide1" class="carousel__slide">
+      <div class="carousel__snapper">
+        <video autoplay loop muted>
+          <source src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <a href="#carousel__slide4" class="carousel__prev">&#10094;</a>
+      <a href="#carousel__slide2" class="carousel__next">&#10095;</a>
+    </li>
+
+    <!-- SLIDE 2 -->
+    <li id="carousel__slide2" class="carousel__slide">
+      <div class="carousel__snapper">
+        <video autoplay loop muted>
+          <source src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <a href="#carousel__slide1" class="carousel__prev">&#10094;</a>
+      <a href="#carousel__slide3" class="carousel__next">&#10095;</a>
+    </li>
+
+    <!-- SLIDE 3 -->
+    <li id="carousel__slide3" class="carousel__slide">
+      <div class="carousel__snapper">
+        <video autoplay loop muted>
+          <source src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <a href="#carousel__slide2" class="carousel__prev">&#10094;</a>
+      <a href="#carousel__slide4" class="carousel__next">&#10095;</a>
+    </li>
+
+    <!-- SLIDE 4 -->
+    <li id="carousel__slide4" class="carousel__slide">
+      <div class="carousel__snapper">
+        <video autoplay loop muted>
+          <source src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <a href="#carousel__slide3" class="carousel__prev">&#10094;</a>
+      <a href="#carousel__slide1" class="carousel__next">&#10095;</a>
+    </li>
+  </ol>
+
+  <div class="carousel__info">
+    <h2 class="frontcrawl">FRONTCRAWL</h2>
+    <p>SPEED</p>
+    <a href="#" class="join-cta">JOIN COMPETENT SWIMMING</a>
+    <p class="inspire-text">🏊 Inspiring Text to be added</p>
+  </div>
+</section>
+
+
 
 <script src="script.js"></script>
 
