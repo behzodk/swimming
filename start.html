@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 1 Part 1 - Two Column Layout</title>
+  <style>
+    /* ==========================================================
+       BRAND COLOURS
+       ========================================================== */
+    /*
+      Primary Colours:
+      - Primary1: #52BCC3
+      - Primary2: #2B6777
+      - Primary3: #FFFFFF
+
+      Secondary Colours:
+      - Secondary1: #06D6D6
+      - Secondary2: #2C3E50
+      - Secondary3: #FFF8F0
+
+      CTA and Highlight Colours:
+      - CTA1: #F76C6C
+      - CTA2: #C1A35D
+
+      Tertiary Colour (Use Sparingly):
+      - #A8E6FF
+    */
+
+    /* =====================================================================
+       GLOBAL RESET & BASE STYLES
+       ===================================================================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: #FFF8F0;
+      background-image: url('https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/images/background/homepage/homepage-background-image-11.svg?v=2');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+
+    .spacer5  { height: 5px;  }
+    .spacer10 { height: 10px; }
+    .spacer20 { height: 20px; }
+    .spacer30 { height: 30px; }
+    .spacer40 { height: 40px; }
+    .spacer50 { height: 50px; }
+    .spacer100 { height: 100px; }
+    .spacer200 { height: 200px; }
+    .spacer300 { height: 300px !important; }
+
+    /* =====================================================================
+       MAIN CONTAINER (Updated for modern, fluid height)
+       ===================================================================== */
+    .main-container-v2 {
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 0;
+      min-height: 100vh; /* let content define height, ensuring full screen coverage */
+      overflow: visible;
+    }
+
+    /* Content Wrapper: two-column layout side by side */
+    .content-wrapper-v2 {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 0 auto;
+      /* background-color: rgba(255, 255, 255, 0.6); */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: visible;
+      max-width: 1400px;
+      padding: 20px;
+    }
+
+    /* =====================================================================
+       LEFT COLUMN (Text + Feature Boxes)
+       ===================================================================== */
+    .left-column {
+      flex: 0 0 50%;
+      padding-left: clamp(20px, 5vw, 80px);
+      padding-right: clamp(20px, 5vw, 40px);
+    }
+
+    .left-column-inner {
+      width: 650px;
+      max-width: 100%;
+      margin: 0 auto; /* centers the content in the left column */
+    }
+
+    /* Introductory Text Section */
+    .intro-text h1 {
+      font-size: 3rem; /* Reduced from 5rem for a more modern look */
+      font-weight: 700;
+      font-family: 'Ubuntu', sans-serif;
+      margin-bottom: 15px;
+      /* TEXT IMAGE BACKGROUND CLIP (like a pattern) */
+      background: url('/wp-content/themes/twentytwentyfour-child/assets/images/font-images/font-text-image-6.svg') repeat;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+
+    .intro-text .sub-heading {
+      font-size: 1.125rem;
+      font-family: Ubuntu, sans-serif;
+      font-weight: 400;
+      margin-bottom: 15px;
+      color: #F5F5F5;
+      padding: 0 85px 0 0;
+    }
+
+    /* CTA Box - More modern button style */
+    .intro-text .cta-box {
+      position: relative;
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: Ubuntu, sans-serif;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(90deg, #F76C6C 0%, #C1A35D 100%);
+      border: none;
+      border-radius: 50px; /* Rounder corners for a modern look */
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .intro-text .cta-box:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .intro-text .cta-box p {
+      font-size: 1.2rem;
+      font-weight: 700;
+      opacity: 1 !important;
+      position: relative;
+      z-index: 2;
+      margin: 0;
+    }
+
+    .intro-text .additional-info {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #F5F5F5;
+      font-family: Ubuntu, sans-serif;
+      font-weight: 400;
+    }
+
+    /* =====================================================================
+       FEATURE BOXES CONTAINER
+       ===================================================================== */
+    .feature-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    /* INDIVIDUAL FEATURE BOX - More modern look */
+    .feature-box {
+      display: inline-flex;
+      flex: 0 1 auto;
+      width: fit-content;
+      height: fit-content;
+      box-sizing: border-box;
+      background-color: #40b2b1; /* derived from brand splits (#2b6777 -> #40b2b1) */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .feature-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 100%;
+    }
+
+    .feature-icon {
+      width: 40px; /* bigger icons for a modern look */
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+    .feature-text {
+      flex: 1;
+    }
+
+    .feature-paragraph {
+      font-size: 0.85rem;
+      background: linear-gradient(to right, rgb(243, 37, 37) 10%, rgb(166, 135, 64) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: Ubuntu, sans-serif;
+      font-weight: 700;
+      margin-bottom: 3px;
+      letter-spacing: -0.5px;
+    }
+
+    .feature-heading {
+      font-size: 1.5rem;
+      color: #FFF;
+      font-family: Ubuntu, sans-serif;
+      font-weight: 700;
+      margin-bottom: 0;
+      letter-spacing: -0.5px;
+    }
+
+    .extra-features-feature-box-1 {}
+    .extra-features-feature-box-2 {}
+    .extra-features-feature-box-3 {}
+
+    /* =====================================================================
+       RIGHT COLUMN (Video)
+       ===================================================================== */
+    .right-column {
+      flex: 1 1 auto;
+      padding: 40px 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+      min-width: 400px;
+    }
+
+    .right-inner {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* VIDEO WRAPPER for wave cut-out shape (if used) */
+    .video-wrapper {
+      position: relative;
+      margin: 0 auto;
+      width: 800px;
+      height: 450px;
+      overflow: hidden;
+      background: #A8E6FF; /* example brand tertiary color for debugging */
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .video-embed {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* RESPONSIVE MEDIA QUERIES */
+    @media (max-width: 768px) {
+      .content-wrapper-v2 {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .left-column,
+      .right-column {
+        padding: 20px;
+      }
+      .feature-boxes {
+        flex-direction: column;
+      }
+      .video-wrapper {
+        width: 100%;
+        height: auto;
+      }
+      .video-embed {
+        height: auto;
+      }
+    }
+
+    .laptop-break {
+      display: none;
+    }
+    @media (min-width: 1024px){
+      .laptop-break {
+        display: inline;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Container -->
+  <div class="main-container-v2">
+    <!-- Content Wrapper: Two Columns -->
+    <div class="content-wrapper-v2">
+
+      <!-- LEFT COLUMN -->
+      <div class="left-column">
+        <div class="left-column-inner">
+          <!-- Intro Text Section -->
+          <section class="intro-text">
+            <h1>SWIM EFFORTLESSLY</h1>
+            <div class="spacer20"></div>
+            <p class="sub-heading">
+              The tide is rising, the waves are moving. Master what holds others back and swim like never before.
+            </p>
+            <div class="spacer20"></div>
+            <!-- CTA Box -->
+            <div class="cta-box">
+              <p>JOIN COMPETENT SWIMMING</p>
+            </div>
+            <div class="spacer5"></div>
+            <p class="additional-info">Limited spots available. Take the leap today!</p>
+          </section>
+
+          <div class="spacer50"></div>
+          <div class="spacer20"></div>
+
+          <!-- Feature Boxes -->
+          <section class="feature-boxes">
+            <!-- Box 1 -->
+            <div class="feature-box extra-features-feature-box-1">
+              <div class="feature-content">
+                <img
+                  src="https://competentswimming.co.uk/wp-content/uploads/2025/02/Untitled-design-11.png"
+                  alt="Personalised Icon"
+                  class="feature-icon"
+                >
+                <div class="feature-text">
+                  <p class="feature-paragraph">PERSONALISED</p>
+                  <h2 class="feature-heading">LEARNING</h2>
+                </div>
+              </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="feature-box extra-features-feature-box-2">
+              <div class="feature-content">
+                <img
+                  src="https://competentswimming.co.uk/wp-content/uploads/2025/02/Untitled-design-3.pdf"
+                  alt="Practical Learning Icon"
+                  class="feature-icon"
+                >
+                <div class="feature-text">
+                  <p class="feature-paragraph">
+                    GO FROM ZERO<br class="laptop-break"> SWIMMING
+                  </p>
+                  <h2 class="feature-heading">
+                    TO 1OOO<br class="laptop-break">METRES
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="feature-box extra-features-feature-box-3">
+              <div class="feature-content">
+                <img
+                  src="https://competentswimming.co.uk/wp-content/uploads/2025/02/Untitled-design-4.pdf"
+                  alt="Community Support Icon"
+                  class="feature-icon"
+                >
+                <div class="feature-text">
+                  <p class="feature-paragraph">1-1 TEACHING FROM</p>
+                  <h2 class="feature-heading">SPECIALISTS</h2>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div><!-- end .left-column-inner -->
+      </div>
+      <!-- END LEFT COLUMN -->
+
+      <!-- RIGHT COLUMN -->
+      <div class="right-column">
+        <div class="right-inner">
+          <div class="spacer300"></div>
+          <section class="video-section">
+            <div class="video-wrapper">
+              <div class="video-container">
+                <video class="video-embed" controls autoplay loop muted>
+                  <source
+                    src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4"
+                    type="video/mp4"
+                  >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </section>
+        </div><!-- end .right-inner -->
+      </div>
+      <!-- END RIGHT COLUMN -->
+
+    </div><!-- end .content-wrapper-v2 -->
+  </div><!-- end .main-container-v2 -->
+</body>
+</html>
