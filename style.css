@@ -37,7 +37,7 @@ body {
 header {
     width: 100%;
     position: fixed;
-    top: 0;
+    top: -15px;
     left: 0;
     z-index: 999;
     background-color: transparent;
@@ -65,14 +65,18 @@ nav {
 .logo-link {
     display: inline-block;
 }
+header.scrolled .logo-img {
+    height: 60px;
+}
 .logo-img {
-    height: 80px; /* bigger logo */
+    transition: all 0.4s ease;
+    height: 160px;
     width: auto;
     object-fit: contain;
 }
 
 .hamburger {
-    display: none; /* shown on mobile breakpoints */
+    display: none;
     flex-direction: column;
     cursor: pointer;
     transition: 0.3s;
@@ -106,6 +110,7 @@ nav {
 }
 
 .nav-item {
+
     position: relative;
     margin: 0 15px;
 }
@@ -296,8 +301,7 @@ nav {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
-
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 /* Left Column: text content, features */
@@ -309,7 +313,7 @@ nav {
 .left-column-inner {
     width: 100%;
     max-width: 650px;
-    margin: 0 auto;
+    margin: 0 50px;
 }
 .right-column{
     flex: 0 0 auto;
@@ -317,7 +321,7 @@ nav {
 }
 
 .intro-text h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 10px;
     color: #ffffff;
@@ -363,32 +367,28 @@ nav {
     flex-wrap: wrap;
     gap: 25px;  /* Space between individual feature boxes */
     align-items: center;
+    perspective: 1000px; 
   }
-  
-  /* =====================================================================
-     Individual Feature Box (Updated for Bottom Feature Boxes)
-     ===================================================================== */
+
   .feature-box {
-    display: inline-flex; /* maintain flex for internal layout */
+    display: inline-flex;
     flex: 0 1 auto;
-    width: fit-content;   /* Shrink-wrap the content */
-    height: fit-content;   /* Forces height to wrap tightly around content */
+    width: fit-content;
+    height: fit-content;
     box-sizing: border-box;
-    background-color: #40b2b1; /* New plain background color */
+    background-color: #40b2b1;
     padding: 15px;
     border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    
-    /* Apply a very thin gradient border: white on the left and silver on the right */
     border: 1px solid; 
     border-image: linear-gradient(to right, white, silver) 1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  
+    /* 3D transform settings */
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    cursor: pointer;
   }
   
-  
-  
-  /* =====================================================================
-     Feature Content (Icon + Text)
-     ===================================================================== */
   .feature-content {
     display: flex;
     align-items: center;
@@ -396,28 +396,15 @@ nav {
     max-width: 100%; /* Ensures it does not take extra space */
   }
   
-  
-  /* =====================================================================
-     Feature Icon Styling
-     ===================================================================== */
   .feature-icon {
     width: 30px;       /* Adjust width as needed */
     height: 30px;      /* Maintains aspect ratio */
     flex-shrink: 0;    /* Prevent the icon from shrinking */
   }
-  
-  /* =====================================================================
-     Feature Text Container (optional)
-     ===================================================================== */
+
   .feature-text {
     flex: 1;           /* Allows the text to fill the remaining space */
   }
-  
-  /* =====================================================================
-     Feature Heading & Paragraphs
-     ===================================================================== */
-  
-  /* Styling the feature headings */
   .feature-heading {
     font-size: 1.37rem;
     color: #ffffff;  /* Changed from #333 to white */
@@ -427,7 +414,6 @@ nav {
     letter-spacing: -0.5px; /* Slightly tighter text for denser look */  
   }
   
-  /* Styling the feature paragraphs */
   .feature-paragraph {
     font-size: 0.7rem;
     background: linear-gradient(to right, rgb(243, 37, 37) 10%, rgb(166, 135, 64) 100%);
@@ -468,6 +454,10 @@ nav {
     object-fit: contain; /* ensures entire video is shown without cropping */
     border-radius: 10px;
 }
+
+
+
+
 
 
 .carousel {
@@ -520,11 +510,11 @@ nav {
   .slide.active video {
     width: 110%;
     opacity: 1;
-    margin-left: -10%;
+    margin-left: -5%;
     z-index: 2;
   }
   .slide.active h2, .slide.active p {
-    margin-left: -10%;
+    margin-left: -5%;
   }
   
   /* Carousel Arrows */
@@ -826,149 +816,6 @@ nav {
 
 
 
-
-
-
-#social-feed-content {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 posts per row */
-  grid-auto-rows: 1fr; /* Equal height for all grid rows */
-  gap: 20px; /* Small gaps between the posts */
-  width: 100%; /* Utilize the full width of the screen */
-  padding: 20px;
-  box-sizing: border-box;
-  
-}
-
-/* Individual Social Post Card Styling */
-#social-feed-content .social-post {
-  background: #ffffff; /* White background for each post */
-  padding: 0; /* Remove padding to make the image go edge-to-edge */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted shadow depth for less contrast */
-  transition: transform 0.3s ease;
-  color: #000000; /* Black text color for the post content */
-  overflow: hidden; /* Clip content outside the card */
-  font-family: Arial, sans-serif;
-  border: none; /* Removed any unnecessary border */
-  margin-bottom: 0; /* Ensure no bottom margin */
-  display: flex; /* Enable flexbox layout */
-  flex-direction: column; /* Stack content vertically */
-  height: 100%; /* Ensure post takes up the full height of its grid cell */
-  box-sizing: border-box;
-}
-
-/* Hover Effect for Each Social Post Card */
-#social-feed-content .social-post:hover {
-  transform: scale(1.05);
-}
-
-/* Media within a Social Post */
-#social-feed-content .social-media {
-  width: 100%; /* Extend image to the full width of the container */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensure it behaves as a block-level element */
-  border-radius: 8px 8px 0 0; /* Rounded top corners */
-  object-fit: cover; /* Ensure the image fills the area while maintaining proportions */
-  margin: 0; /* Remove all margins */
-  cursor: pointer; /* Turn mouse into a hand when hovering over the image */
-}
-
-/* Social Post Content Wrapper */
-#social-feed-content .social-content {
-  text-align: left; /* Align text to the left for readability */
-  padding: 20px; /* Restore padding for the caption */
-  flex-grow: 1;
-}
-
-/* Social Text Styling */
-#social-feed-content .social-text {
-  font-size: 16px;
-  margin-bottom: 10px;
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 5; /* Limit text to 5 lines */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis; /* Show ellipsis if text exceeds 5 lines */
-}
-
-/* Social Hashtags Styling */
-#social-feed-content .social-hashtags {
-  margin-top: 5px;
-  font-size: 14px;
-  color: #52bcc3; /* Light blue color for hashtags */
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-/* Social Author Section Styling */
-.social-author-section {
-  display: flex; /* Enable flexbox layout */
-  align-items: center; /* Align items vertically */
-  justify-content: flex-start; /* Align items to the left */
-  gap: 10px; /* Space between logo and text */
-  margin-top: auto; /* Push the section to the bottom */
-}
-
-/* Social Logo Styling for Posts */
-.social-logo {
-  width: 40px; /* Adjusted size for better responsiveness */
-  height: 40px; /* Ensure proportional size */
-  border-radius: 50%; /* Circular logo */
-  object-fit: cover; /* Maintain aspect ratio */
-  flex-shrink: 0; /* Prevent shrinking */
-}
-
-/* Social Author Details */
-.social-author-details {
-  display: flex;
-  flex-direction: column; /* Stack title and date vertically */
-  justify-content: center;
-  min-width: 0; /* Allow text truncation */
-}
-
-/* Social Author Text Styling */
-.social-author-text {
-  font-size: 14px; /* Adjusted font size */
-  white-space: nowrap; /* Prevent wrapping */
-  overflow: hidden; /* Hide overflowing text */
-  text-overflow: ellipsis; /* Add ellipsis (...) */
-  max-width: 80%; /* Ensure text does not exceed container width */
-  color: #000; /* Black text color */
-  text-decoration: none; /* Remove underline by default */
-  cursor: pointer; /* Hand icon when hovering over title */
-}
-
-.social-author-text:hover {
-  text-decoration: underline; /* Underline on hover */
-}
-
-/* Social Date Styling */
-#social-feed-content .social-date {
-  font-size: 12px; /* Smaller font for date */
-  color: #aaaaaa;
-  margin-top: 3px; /* Adjust spacing between text and date */
-  white-space: nowrap; /* Prevent wrapping */
-  overflow: hidden;
-  text-overflow: ellipsis; /* Add ellipsis if necessary */
-}
-
-/* Social Source Icon Styling */
-.social-source-icon {
-  width: 30px; /* Adjust width if needed */
-  height: 30px; /* Ensure the logo maintains the same height */
-  margin-left: auto; /* Push the source icon to the right end */
-  object-fit: contain; /* Ensure the whole image is visible */
-  flex-shrink: 0; /* Prevent the icon from shrinking */
-  cursor: pointer; /* Change mouse cursor to hand when hovering over the icon */
-}
-
-/* Hide Hashtags (temporary fix, couldn't organize the hashtags properly) */
-#social-feed-content .social-hashtags {
-  display: none;
-}
-
 /* Overlay for Popup */
 .popup-overlay-2 {
   display: none; /* Initially hidden */
@@ -982,4 +829,12 @@ nav {
   align-items: center;
   justify-content: center;
   overflow: auto; /* Allows scrolling if needed */
+}
+
+
+.faq-content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.4s ease, opacity 0.4s ease;
 }
