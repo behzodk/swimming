@@ -8,16 +8,16 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
+  <script src="https://kit.fontawesome.com/YOUR_FA_KIT.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
+<body>
 <header id="siteHeader" class="animate__animated animate__fadeInDown animate__faster">
   <nav>
     <a href="#" class="logo-link">
@@ -90,6 +90,7 @@
   </nav>
 </header>
 
+<div class="shadow">
 <div class="main-container-v2 animate__animated animate__fadeIn" style="--animate-duration: 1s;">
   <div class="content-wrapper-v2">
     <div class="left-column animate__animated animate__fadeInLeft animate__slow">
@@ -110,47 +111,36 @@
 
         <!-- Feature boxes: new design with creative icons from a CDN (no local saving). Same original text retained. -->
         <section class="feature-boxes">
-          <!-- Box 1: Personalised Learning -->
-          <div class="feature-box animate__animated animate__fadeInUp animate__delay-1s">
+          <!-- Box 1 -->
+          <div class="feature-box extra-features-feature-box-1">
             <div class="feature-content">
-              <!-- External icon from flaticon (placeholder) -->
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/3077/3077099.png" 
-                alt="Personalised Icon"
-                class="feature-icon"
-              />
+              <img src="https://competentswimming.co.uk/wp-content/uploads/2025/02/Untitled-design-11.png" alt="Personalised Icon" class="feature-icon">
               <div class="feature-text">
                 <p class="feature-paragraph">PERSONALISED</p>
                 <h2 class="feature-heading">LEARNING</h2>
               </div>
             </div>
           </div>
-
-          <!-- Box 2: Go From Zero Swimming to 1000 Metres -->
-          <div class="feature-box animate__animated animate__fadeInUp animate__delay-2s">
+          
+          <!-- Box 2 -->
+          <div class="feature-box extra-features-feature-box-2">
             <div class="feature-content">
-              <!-- Another external icon -->
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/3147/3147330.png"
-                alt="Distance Icon"
-                class="feature-icon"
-              />
+              <img src="https://competentswimming.co.uk/wp-content/uploads/2025/02/Untitled-design-3.png" alt="Practical Learning Icon" class="feature-icon">
               <div class="feature-text">
-                <p class="feature-paragraph">GO FROM ZERO<br>SWIMMING</p>
-                <h2 class="feature-heading">TO 1OOO<br>METRES</h2>
+                <p class="feature-paragraph">
+                  GO FROM ZERO<br class="laptop-break"> SWIMMING
+                </p>
+                <h2 class="feature-heading">
+                  TO 1OOO<br class="laptop-break">METRES
+                </h2>
               </div>
             </div>
           </div>
-
-          <!-- Box 3: 1-1 Teaching from Specialists -->
-          <div class="feature-box animate__animated animate__fadeInUp animate__delay-3s">
+          
+          <!-- Box 3 -->
+          <div class="feature-box extra-features-feature-box-3">
             <div class="feature-content">
-              <!-- External icon from flaticon (placeholder) -->
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/201/201570.png"
-                alt="Specialist Icon"
-                class="feature-icon"
-              />
+              <img src="https://competentswimming.co.uk/wp-content/uploads/2025/02/Untitled-design-4.pdf" alt="Community Support Icon" class="feature-icon">
               <div class="feature-text">
                 <p class="feature-paragraph">1-1 TEACHING FROM</p>
                 <h2 class="feature-heading">SPECIALISTS</h2>
@@ -158,6 +148,7 @@
             </div>
           </div>
         </section>
+
       </div>
     </div>
 
@@ -182,76 +173,596 @@
     </div>
   </div>
 </div>
+</div>
 
+<div class="carousel">
+  <div class="bubble-container"></div>
+  <!-- Left Arrow -->
+  <button class="carousel-arrow prev" aria-label="Previous Slide">&#10094;</button>
+  
+  <div class="carousel-track-container">
+    <div class="carousel-track">
+      <div class="slide">
+        <div class="text-content">
+          <video src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4" muted controls loop></video>
+            <h2>SWIMMING</h2>
+            <p>Cool lessons</p>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide active">
+        <div class="text-content">
+          <video src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4" muted controls loop></video>
+          <h2>SWIMMING</h2>
+          <p>Cool lessons</p>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <div class="text-content">
+          <video src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4" muted controls loop></video>
+          <h2>SWIMMING</h2>
+          <p>Cool lessons</p>
 
-<section class="carousel" aria-label="Gallery">
-  <!-- Bubble Animation Container -->
-  <div class="bubble-container">
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
+        </div>
+      </div>
+      <!-- Slide 4 (additional slide to demonstrate looping; add more slides as needed) -->
+      <div class="slide">
+        <div class="text-content">
+          <video src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4"  muted controls loop></video>
+          <h2>SWIMMING</h2>
+          <p>Cool lessons</p>
+        </div>
+      </div>
+      <!-- You can add more .slide elements here if desired -->
+    </div>
   </div>
   
-  <ol class="carousel__viewport">
-    <!-- SLIDE 1 -->
-    <li id="carousel__slide1" class="carousel__slide">
-      <div class="carousel__snapper">
-        <video autoplay loop muted>
-          <source src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <a href="#carousel__slide4" class="carousel__prev">&#10094;</a>
-      <a href="#carousel__slide2" class="carousel__next">&#10095;</a>
-    </li>
+  <!-- Right Arrow -->
+  <button class="carousel-arrow next" aria-label="Next Slide">&#10095;</button>
+</div>
 
-    <!-- SLIDE 2 -->
-    <li id="carousel__slide2" class="carousel__slide">
-      <div class="carousel__snapper">
-        <video autoplay loop muted>
-          <source src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <a href="#carousel__slide1" class="carousel__prev">&#10094;</a>
-      <a href="#carousel__slide3" class="carousel__next">&#10095;</a>
-    </li>
+<section class="swim-section">
+  <h2 class="swim-heading">WHY SWIMMING IS IMPORTANT</h2>
 
-    <!-- SLIDE 3 -->
-    <li id="carousel__slide3" class="carousel__slide">
-      <div class="carousel__snapper">
-        <video autoplay loop muted>
-          <source src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4" type="video/mp4" />
-        </video>
+  <div class="columns">
+    <div class="left-col">
+      <!-- Left Section 1 remains unchanged -->
+      <div class="left-section sec1"><img src="https://pngimg.com/d/swimming_PNG55393.png" style="max-width: 700px;" alt=""></div>
+      
+      <!-- Left Section 2 is now a benefits section -->
+      <div class="left-section sec2">
+        <div class="benefits">
+          <h2>ACCESS THE WATER WHEREVER YOU GO</h2>
+          <ul>
+            <li>Builds endurance</li>
+            <li>Improves muscle strength</li>
+            <li>Enhances flexibility</li>
+          </ul>
+        </div>
       </div>
-      <a href="#carousel__slide2" class="carousel__prev">&#10094;</a>
-      <a href="#carousel__slide4" class="carousel__next">&#10095;</a>
-    </li>
-
-    <!-- SLIDE 4 -->
-    <li id="carousel__slide4" class="carousel__slide">
-      <div class="carousel__snapper">
-        <video autoplay loop muted>
-          <source src="https://competentswimming.co.uk/wp-content/themes/twentytwentyfour-child/assets/videos/homepage/video-1.mp4" type="video/mp4" />
-        </video>
+      
+      <!-- Left Section 3 remains unchanged -->
+      <div class="left-section sec3">
+        <img src="https://pngimg.com/d/swimming_PNG55393.png" style="max-width: 700px;" alt="">
       </div>
-      <a href="#carousel__slide3" class="carousel__prev">&#10094;</a>
-      <a href="#carousel__slide1" class="carousel__next">&#10095;</a>
-    </li>
-  </ol>
-
-  <div class="carousel__info">
-    <h2 class="frontcrawl">FRONTCRAWL</h2>
-    <p>SPEED</p>
-    <a href="#" class="join-cta">JOIN COMPETENT SWIMMING</a>
-    <p class="inspire-text">🏊 Inspiring Text to be added</p>
+    </div>
+    
+    <div class="right-col">
+      <!-- Right Section 1 is now a benefits section -->
+      <div class="right-section sec1">
+        <div class="benefits">
+          <h2>ACCESS THE WATER WHEREVER YOU GO</h2>
+          <ul>
+            <li>Life Saving Skill</li>
+            <li>Prevents drowning</li>
+            <li>Boosts water confidence</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Right Section 2 remains unchanged -->
+      <div class="right-section sec2"><img src="https://pngimg.com/d/swimming_PNG55393.png" style="max-width: 700px;" alt=""></div>
+      
+      <!-- Right Section 3 is now a benefits section -->
+      <div class="right-section sec3">
+        <div class="benefits">
+          <h2>ACCESS THE WATER WHEREVER YOU GO</h2>
+          <ul>
+            <li>Access to Water</li>
+            <li>Swim anywhere</li>
+            <li>Enjoy beaches</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Centered arrow remains -->
+    <div class="arrow-scroll" id="arrow-scroll"></div>
   </div>
 </section>
 
+<div class="testimonial-slider">
+  <br>
+  <h2>Testimonials</h2>
+  <div class="slider-track">
+    <div class="testimonial">
+      <p>"This product exceeded all my expectations. Truly remarkable!"</p>
+      <h4>- John Doe</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Outstanding service and quality. I highly recommend it to everyone."</p>
+      <h4>- Jane Smith</h4>
+    </div>
+    <div class="testimonial">
+      <p>"A seamless experience from start to finish. Five stars!"</p>
+      <h4>- Mike Johnson</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Modern design, great performance – it has it all."</p>
+      <h4>- Sarah Williams</h4>
+    </div>
+    <div class="testimonial">
+      <p>"I love the intuitive interface and the attention to detail."</p>
+      <h4>- Emma Brown</h4>
+    </div>
+    <div class="testimonial">
+      <p>"The best investment I’ve made this year. Truly a game changer."</p>
+      <h4>- Chris Davis</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Elegant, fast, and reliable. I use it every day without fail."</p>
+      <h4>- Olivia Garcia</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Innovative and beautifully crafted, it stands out from the crowd."</p>
+      <h4>- Liam Martinez</h4>
+    </div>
+  </div>
+  <br>
+  <div class="slider-track-2">
+    <div class="testimonial">
+      <p>"This product exceeded all my expectations. Truly remarkable!"</p>
+      <h4>- John Doe</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Outstanding service and quality. I highly recommend it to everyone."</p>
+      <h4>- Jane Smith</h4>
+    </div>
+    <div class="testimonial">
+      <p>"A seamless experience from start to finish. Five stars!"</p>
+      <h4>- Mike Johnson</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Modern design, great performance – it has it all."</p>
+      <h4>- Sarah Williams</h4>
+    </div>
+    <div class="testimonial">
+      <p>"I love the intuitive interface and the attention to detail."</p>
+      <h4>- Emma Brown</h4>
+    </div>
+    <div class="testimonial">
+      <p>"The best investment I’ve made this year. Truly a game changer."</p>
+      <h4>- Chris Davis</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Elegant, fast, and reliable. I use it every day without fail."</p>
+      <h4>- Olivia Garcia</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Innovative and beautifully crafted, it stands out from the crowd."</p>
+      <h4>- Liam Martinez</h4>
+    </div>
+  </div>
+  <br>
+</div>
+
+<div class="bg-black p-4">
+  <div class="grid gap-2">
+    
+    <!-- Row 1: 60% - 40% -->
+    <div class="grid grid-cols-5 gap-2">
+      <div class="relative col-span-3 overflow-hidden rounded-lg">
+        <img src="https://images.ctfassets.net/1fvlg6xqnm65/4hoKCXOMGa9JwmZNUKdquK/d03bf3037cb62df010064726147a2384/TW-China-Preview-IMAGE-1.jpg?w=3840&q=75&fm=webp" 
+             alt="Image 1" class="w-full h-96 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white p-4 opacity-80 transition-all duration-300 hover:bg-black/80 hover:opacity-100">
+          <p class="text-lg font-semibold transition-all duration-300 hover:scale-105">Title 1</p>
+        </div>
+      </div>
+      <div class="relative col-span-2 overflow-hidden rounded-lg">
+        <img src="https://images.ctfassets.net/1fvlg6xqnm65/7naeCnXqrlvLxNZssGj1ec/aa35cceee7a6a567c902a11569c66fd8/Miami_WebHERO.png?w=3840&q=75&fm=webp" 
+             alt="Image 2" class="w-full h-96 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white p-4 opacity-80 transition-all duration-300 hover:bg-black/80 hover:opacity-100">
+          <p class="text-lg font-semibold transition-all duration-300 hover:scale-105">Title 2</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: 40% - 60% -->
+    <div class="grid grid-cols-5 gap-2">
+      <div class="relative col-span-2 overflow-hidden rounded-lg">
+        <img src="https://images.ctfassets.net/1fvlg6xqnm65/3UOvPMBx10pfFpxopDJWMm/a6ca434216141a3011024dcb18338fbb/Aus-Story-Of-IMAGE-MOBIEL.jpg?w=3840&q=75&fm=webp" 
+             alt="Image 3" class="w-full h-96 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white p-4 opacity-80 transition-all duration-300 hover:bg-black/80 hover:opacity-100">
+          <p class="text-lg font-semibold transition-all duration-300 hover:scale-105">Title 3</p>
+        </div>
+      </div>
+      <div class="relative col-span-3 overflow-hidden rounded-lg">
+        <img src="https://images.ctfassets.net/1fvlg6xqnm65/3I4H3XkMQ624D7nPEyZAR6/268a143c6a2a9f9b13594a36ce10b678/M426704.jpg?w=3840&q=75&fm=webp" 
+             alt="Image 4" class="w-full h-96 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white p-4 opacity-80 transition-all duration-300 hover:bg-black/80 hover:opacity-100">
+          <p class="text-lg font-semibold transition-all duration-300 hover:scale-105">Title 4</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: 60% - 40% -->
+    <div class="grid grid-cols-5 gap-2">
+      <div class="relative col-span-3 overflow-hidden rounded-lg">
+        <img src="https://images.ctfassets.net/1fvlg6xqnm65/4hoKCXOMGa9JwmZNUKdquK/d03bf3037cb62df010064726147a2384/TW-China-Preview-IMAGE-1.jpg?w=3840&q=75&fm=webp" 
+             alt="Image 5" class="w-full h-96 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white p-4 opacity-80 transition-all duration-300 hover:bg-black/80 hover:opacity-100">
+          <p class="text-lg font-semibold transition-all duration-300 hover:scale-105">Title 5</p>
+        </div>
+      </div>
+      <div class="relative col-span-2 overflow-hidden rounded-lg">
+        <img src="https://images.ctfassets.net/1fvlg6xqnm65/7naeCnXqrlvLxNZssGj1ec/aa35cceee7a6a567c902a11569c66fd8/Miami_WebHERO.png?w=3840&q=75&fm=webp" 
+             alt="Image 6" class="w-full h-96 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white p-4 opacity-80 transition-all duration-300 hover:bg-black/80 hover:opacity-100">
+          <p class="text-lg font-semibold transition-all duration-300 hover:scale-105">Title 6</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="flex space-x-8 p-9 rounded-lg mx-auto max-w-7xl">
+  <!-- Left: Container for the image taking 50% width -->
+  <div class="w-1/2 flex items-center justify-center ml-[-50px]">
+    <img src="https://www.superprof.ca/blog/wp-content/uploads/2023/02/pexels-jim-de-ramos-1263348.jpg" 
+         alt="Oval Image" 
+         class="w-[1000px] h-[700px] object-cover rounded-full">
+  </div>
+
+  <!-- Right: Title & Paragraphs -->
+  <div class="w-1/2 pr-0 pl-20">
+    <h2 class="text-5xl font-bold text-gray-800">Component Title</h2>
+    <p class="text-gray-700 mt-20 text-2xl">
+      This is a simple component with an oval image on the left and text on the right. 
+      The image takes half of the space, and the text occupies the other half for better layout balance.
+    </p>
+    <br>
+    <br>
+
+    <p class="text-gray-700 mt-3 text-2xl">
+      This is a simple component with an oval image on the left and text on the right. 
+      The image takes half of the space, and the text occupies the other half for better layout balance.
+    </p>
+    <br>
+    <br>
+
+    <p class="text-gray-700 mt-3 text-2xl">
+      This is a simple component with an oval image on the left and text on the right. 
+      The image takes half of the space, and the text occupies the other half for better layout balance.
+    </p>
+  </div>
+</div>
+
+<div class="bg-gray-100 p-6">
+  <h1 class="text-4xl font-bold text-gray-800 text-center mb-6">Social Media Posts</h1>  
+  <div class="max-w-6xl mx-auto masonry">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden masonry-item">
+      <img src="https://i.pinimg.com/736x/53/0e/54/530e54946e20976aebd90379175dc439.jpg" alt="Ferrari" class="w-full object-cover">
+      <div class="p-4">
+        <p class="font-semibold">Ready to get back on track ⚡</p>
+        <div class="flex items-center justify-between mt-2">
+          <div class="flex items-center">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/031/737/206/small_2x/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023-x-social-media-icon-free-png.png" class="w-8 h-8 rounded-full">
+            <p class="text-sm text-gray-500 ml-2">Scuderia Ferrari HP • 1 hour ago</p>
+          </div>
+          <i class="fa-solid fa-heart text-gray-500 hover:text-red-500 cursor-pointer"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden masonry-item">
+      <img src="https://i.pinimg.com/736x/14/2c/85/142c85c06e1be00b76c15299e3083628.jpg" alt="Ferrari" class="w-full object-cover">
+      <div class="p-4">
+        <p class="font-semibold">What a setting to go racing 😍</p>
+        <p class="text-sm text-gray-500">#F1 #LasVegasGP</p>
+        <div class="flex items-center justify-between mt-2">
+          <div class="flex items-center">
+            <img src="https://source.unsplash.com/40x40/?profile" class="w-8 h-8 rounded-full">
+            <p class="text-sm text-gray-500 ml-2">Scuderia Ferrari HP • 2 hours ago</p>
+          </div>
+          <i class="fa-solid fa-heart text-gray-500 hover:text-red-500 cursor-pointer"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 (Large) -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden masonry-item">
+      <img src="https://i.pinimg.com/736x/88/be/2f/88be2f4f1059f5c71432a46ce22ac74f.jpg" alt="Ferrari" class="w-full object-cover">
+      <div class="p-4">
+        <p class="font-semibold text-xl">GRAZIE MILLE</p>
+        <p class="text-sm text-gray-500">
+          New adventures await for @ShwartzmanRob as he starts a new journey in Indy Car.
+        </p>
+        <div class="flex items-center justify-between mt-2">
+          <div class="flex items-center">
+            <img src="https://source.unsplash.com/40x40/?person2" class="w-8 h-8 rounded-full">
+            <p class="text-sm text-gray-500 ml-2">Scuderia Ferrari HP • 16 hours ago</p>
+          </div>
+          <i class="fa-solid fa-heart text-gray-500 hover:text-red-500 cursor-pointer"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden masonry-item">
+      <img src="https://i.pinimg.com/736x/6c/90/05/6c900539b8234bf79c85ad9e9a280b7c.jpg" alt="Ferrari" class="w-full object-cover">
+      <div class="p-4">
+        <p class="font-semibold">Play the replay! 🎙️</p>
+        <p class="text-sm text-gray-500">Paul Mescal and the team take on a challenge.</p>
+        <div class="flex items-center justify-between mt-2">
+          <div class="flex items-center">
+            <img src="https://source.unsplash.com/40x40/?people" class="w-8 h-8 rounded-full">
+            <p class="text-sm text-gray-500 ml-2">Scuderia Ferrari HP • 5 hours ago</p>
+          </div>
+          <i class="fa-solid fa-heart text-gray-500 hover:text-red-500 cursor-pointer"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden masonry-item">
+      <img src="https://i.pinimg.com/736x/6b/a6/5c/6ba65cf23c20b9e2adab4be70466914c.jpg" alt="Ferrari" class="w-full object-cover">
+      <div class="p-4">
+        <p class="font-semibold">A great day on track 🚗💨</p>
+        <p class="text-sm text-gray-500">Behind the scenes with our drivers.</p>
+        <div class="flex items-center justify-between mt-2">
+          <div class="flex items-center">
+            <img src="https://source.unsplash.com/40x40/?man" class="w-8 h-8 rounded-full">
+            <p class="text-sm text-gray-500 ml-2">Scuderia Ferrari HP • 18 hours ago</p>
+          </div>
+          <i class="fa-solid fa-heart text-gray-500 hover:text-red-500 cursor-pointer"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden masonry-item">
+      <img src="https://i.pinimg.com/736x/6b/a6/5c/6ba65cf23c20b9e2adab4be70466914c.jpg" alt="Ferrari" class="w-full object-cover">
+      <div class="p-4">
+        <p class="font-semibold">A great day on track 🚗💨</p>
+        <p class="text-sm text-gray-500">Behind the scenes with our drivers.</p>
+        <div class="flex items-center justify-between mt-2">
+          <div class="flex items-center">
+            <img src="https://source.unsplash.com/40x40/?man" class="w-8 h-8 rounded-full">
+            <p class="text-sm text-gray-500 ml-2">Scuderia Ferrari HP • 18 hours ago</p>
+          </div>
+          <i class="fa-solid fa-heart text-gray-500 hover:text-red-500 cursor-pointer"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex flex-col items-center justify-center p-10">
+  <h1 class="text-5xl font-extrabold text-gray-900 text-center mb-12 tracking-wide">You Will Learn</h1>
+
+    <!-- Learning Sections -->
+    <div class="w-full max-w-5xl space-y-6">
+
+        <!-- Container 1: The Four Main Strokes -->
+        <div class="card bg-white p-8 rounded-xl shadow-md transition w-4/10 mx-none">
+            <h2 class="text-3xl font-semibold text-blue-600 flex items-center">
+                <span class="mr-3 text-4xl">🏊‍♂️</span> The Four Main Strokes
+            </h2>
+            <ul class="mt-4 space-y-2 text-gray-600 text-lg">
+                <li class="flex items-center"><span class="text-blue-400 text-2xl mr-2">•</span> Frontcrawl</li>
+                <li class="flex items-center"><span class="text-blue-400 text-2xl mr-2">•</span> Backstroke</li>
+                <li class="flex items-center"><span class="text-blue-400 text-2xl mr-2">•</span> Butterfly</li>
+                <li class="flex items-center"><span class="text-blue-400 text-2xl mr-2">•</span> Breaststroke</li>
+            </ul>
+        </div>
+
+        <!-- Container 2: Competitive Skills -->
+        <div class="card bg-white p-8 rounded-xl shadow-md transition w-4/9 mx-auto">
+            <h2 class="text-3xl font-semibold text-green-600 flex items-center">
+                <span class="mr-3 text-4xl">🏆</span> Competitive Skills
+            </h2>
+            <ul class="mt-4 space-y-2 text-gray-600 text-lg">
+                <li class="flex items-center"><span class="text-green-400 text-2xl mr-2">•</span> Diving</li>
+                <li class="flex items-center"><span class="text-green-400 text-2xl mr-2">•</span> Push and Gliding</li>
+                <li class="flex items-center"><span class="text-green-400 text-2xl mr-2">•</span> Log Rolls</li>
+            </ul>
+        </div>
+
+        <!-- Container 3: Life Essentials -->
+        <div class="card bg-white p-8 rounded-xl shadow-md transition w-4/10 mx-auto">
+            <h2 class="text-3xl font-semibold text-purple-600 flex items-center">
+                <span class="mr-3 text-4xl">🌊</span> Life Essentials
+            </h2>
+            <ul class="mt-4 space-y-2 text-gray-600 text-lg">
+                <li class="flex items-center"><span class="text-purple-400 text-2xl mr-2">•</span> Sculling</li>
+                <li class="flex items-center"><span class="text-purple-400 text-2xl mr-2">•</span> Treading Water</li>
+                <li class="flex items-center"><span class="text-purple-400 text-2xl mr-2">•</span> Floating</li>
+                <li class="flex items-center"><span class="text-purple-400 text-2xl mr-2">•</span> Water Confidence</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Second Title -->
+    <h1 class="text-5xl font-extrabold text-gray-900 text-center mt-16 mb-6 tracking-wide">Learn to Swim</h1>
+
+    <!-- Centered Paragraph -->
+    <p class="text-xl text-gray-700 text-center max-w-3xl leading-relaxed">
+        Swimming is an essential life skill that builds confidence in the water, improves fitness, 
+        and ensures safety. Start your journey today and master the art of swimming.
+    </p>
+
+    <!-- CTA Box -->
+    <div class="bg-blue-600 text-white text-center px-10 py-6 mt-12 rounded-xl shadow-lg transition hover:bg-blue-700 hover:shadow-xl w-4/5 mx-auto">
+        <p class="text-2xl font-semibold tracking-wide">Join Our Swimming Program Today!</p>
+        <button class="mt-4 bg-white text-blue-600 font-bold py-3 px-8 rounded-full shadow-md hover:bg-gray-100 transition">
+            Get Started
+        </button>
+    </div>
+</div>
 
 
+<div id="social-feed-container">
+  <div id="social-feed-content" class="social-feed-content"></div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  function getDynamicHeight() {
+    return (window.innerHeight / 572) * 845;
+  }
+
+  gsap.fromTo("#arrow-scroll",
+    { height: 0 },
+    {
+      height: getDynamicHeight(),
+      scrollTrigger: {
+        trigger: ".swim-section",
+        start: "top top",      // when .swim-section hits top of viewport
+        end: "bottom-=100 top",  // when .swim-section bottom hits bottom of viewport
+        scrub: true            // smooth, real-time correlation to scroll
+      }
+    }
+  );
+
+  window.addEventListener("resize", () => {
+    gsap.to("#arrow-scroll", { height: getDynamicHeight(), duration: 0.3 });
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
 <script src="script.js"></script>
+
+<script>
+  const sliderTrack = document.querySelector('.slider-track');
+  let currentOffset = 0;
+  const speed = 0.5; // Adjust scrolling speed
+  const gap = 30;    // Must match the CSS gap
+
+  function animate() {
+    // Move slider by updating the transform
+    currentOffset -= speed;
+    sliderTrack.style.transform = `translateX(${currentOffset}px)`;
+
+    // Get the first testimonial and compute its total width (including gap)
+    const firstTestimonial = sliderTrack.children[0];
+    const totalWidth = firstTestimonial.offsetWidth + gap;
+    
+    // When the first testimonial is completely out of view, move it to the end
+    if (Math.abs(currentOffset) >= totalWidth) {
+      sliderTrack.appendChild(firstTestimonial);
+      currentOffset += totalWidth;
+      sliderTrack.style.transform = `translateX(${currentOffset}px)`;
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
+</script>
+
+<script>
+  const sliderTrack2 = document.querySelector('.slider-track-2');
+  let currentOffset2 = 0;
+  const speed2 = 0.5; // Adjust scrolling speed as needed
+  const gap2 = 30;    // Must match the CSS gap
+
+  function animate2() {
+    // Increase offset to move the slider rightwards
+    currentOffset2 += speed2;
+    sliderTrack2.style.transform = `translateX(${currentOffset2}px)`;
+
+    // When the offset becomes positive (a gap appears on the left),
+    // immediately reposition the last testimonial at the beginning.
+    if (currentOffset2 > 0) {
+      const lastTestimonial = sliderTrack2.lastElementChild;
+      const totalWidth2 = lastTestimonial.offsetWidth + gap2;
+      // Move last testimonial to the beginning
+      sliderTrack2.insertBefore(lastTestimonial, sliderTrack2.firstChild);
+      // Adjust the offset so that the new element appears immediately
+      currentOffset2 -= totalWidth2;
+      sliderTrack2.style.transform = `translateX(${currentOffset2}px)`;
+    }
+    requestAnimationFrame(animate2);
+  }
+  animate2();
+</script>
+
+<script>
+  (function() {
+    // Function to create a single bubble with random properties
+    function createBubble() {
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      
+      // Random size between 10px and 40px
+      const size = Math.random() * 30 + 10;
+      bubble.style.width = size + 'px';
+      bubble.style.height = size + 'px';
+      
+      // Random horizontal starting position (0% to 100%)
+      bubble.style.left = Math.random() * 100 + '%';
+      
+      // Random animation duration between 4s and 10s
+      const duration = Math.random() * 6 + 4;
+      bubble.style.animationDuration = duration + 's';
+      
+      // Random delay up to 5 seconds
+      const delay = Math.random() * 5;
+      bubble.style.animationDelay = delay + 's';
+      
+      // Allow bubble to receive pointer events
+      bubble.style.pointerEvents = 'auto';
+      
+      // Append the bubble to the container
+      document.querySelector('.bubble-container').appendChild(bubble);
+      
+      // Remove the bubble from the DOM after its animation completes
+      let removalTimeout = setTimeout(() => {
+        bubble.remove();
+      }, (duration + delay) * 1000);
+      
+      // Add mouseover event: when hovered, trigger explosion animation
+      bubble.addEventListener('mouseover', function() {
+        clearTimeout(removalTimeout); // Cancel the normal removal
+        bubble.style.animation = 'explode 0.5s forwards';
+        setTimeout(() => {
+          bubble.remove();
+        }, 500); // Remove after explosion animation completes
+      });
+    }
+    
+    // Function to add bubbles at random intervals
+    function addBubble() {
+      createBubble();
+      // Create next bubble after a random delay (e.g., 0 to 800ms)
+      setTimeout(addBubble, Math.random() * 800);
+    }
+    
+    // Start the bubble animation loop
+    addBubble();
+  })();
+</script>
+
 
 </body>
 </html>
